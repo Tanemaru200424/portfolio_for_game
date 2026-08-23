@@ -205,6 +205,40 @@
           </div>
         </div>
       </div>
+
+      <div class="work-content">
+        <div class="work-description">
+          <h3>作品名：2Dシューティング「納豆狩猟道」</h3>
+          <p class="text-contents">
+            電気通信大学で開催された3daysゲームジャムで作成しました。プランナーとプログラマーを担当しました。シューティングステージを通して敵である食材を納豆で絡め取り、リザルトで料理を完成させるゲームです。<br>GitHubにおける「tsumura_action_player」がプログラマーとしての担当箇所です。
+            <br>【工夫した点】
+            <ul>
+              <li>敵を量産しやすいよう、共通のスクリプトで動作するようにしました。<br>
+                  行動スクリプトのパラメータを調整し、弾生成スクリプトを変更することで様々な敵を作成することができます。<br>
+                  アニメーションは共通パーツだけ動かし、食材のイラストを動かさないことで、共通のアニメーションを異なる見た目の敵に反映させることができます。</li>
+              <li>プレイヤーの攻撃溜め中、攻撃予測範囲を表示し、攻撃力の段階に応じて色を変化させるようにしました。<br>
+                  このゲームにおいては効率よく敵を倒していく行為が重視されやすいと考え、プレイヤーに攻撃の影響を把握させるために実装しました。</li>
+              <li>倒した敵に応じたリザルトのイラスト変化やステージ分岐を実装しました。<br>
+                  短い期間で作成したゲームに、繰り返しプレイする動機を与えるために実装しました。試遊会で好評をいただいた要素です。</li>
+              <li>納豆の描画にUnityのParentConstraintとLineRendererを利用しました。以下実装手順です。<br>
+                  まず納豆の各豆の位置を指定するからオブジェクト群を用意し、それらを黄金角を利用したフェルマーの螺旋で散らばるようにします。位置オブジェクト群の親を拡大縮小することによって散らばりを調整します。<br>
+                  豆の画像を豆の位置指定オブジェクト数分用意し、ParentConstraintで豆が位置オブジェクトに追従するようにします。<br>
+                  2つの豆のペアを重複ができないよう指定し、LineRendererで結びます。納豆の糸らしくするために端を太く、真ん中に行くにつれ細くなるよう調整します。</li>
+            </ul>
+          </p>
+          <div class="work-link">
+            <a href="https://unityroom.com/games/natto_syuryo_do" class="btn play-btn" target="_blank" rel="noopener noreferrer">
+              UnityRoomで試遊する
+            </a>
+
+            <a href="https://github.com/Tanemaru200424/CEREC_GameJam_Natto/tree/tsumura/action_player" class="btn github-btn" target="_blank" rel="noopener noreferrer">
+              GitHubでコードを見る
+            </a>
+  
+            <p class="play-notes">※PCブラウザでのプレイを推奨します</p>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
