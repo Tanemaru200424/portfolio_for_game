@@ -166,7 +166,7 @@
 
       <div class="work-content">
         <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Gfg1b7rOMWE" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://youtu.be/gczxjFlxfRE" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="work-description">
           <h3>作品名：3Dシューティング「Virus Buster」</h3>
@@ -174,13 +174,18 @@
             初めての3D作品です。移動モードと射撃モードの2つのモードを使い分け、敵を全て撃破するゲームです。
             <br>【工夫した点】
             <ul>
+              <li>敵の視線をLineRendererで描画しました。攻撃中は赤く光ります。<br>
+                　後ろの状況がほぼ見えない、敵に集中して視野が狭くなりやすいこのゲームにおいて、周囲の状況を把握する補助要素は必要と考え実装しました。</li>
+              <li>ShaderGraphを使用しフィールドの端を表現しました。<br>
+                　見えない壁のままだと違和感があったため追加しました。ShaderGraphを初使用したため練習も兼ねています。</li>
+              <li>敵を倒した時にTimeScaleを変更しスロー演出を実装しました。<br>
+                  倒した瞬間をプレイヤーに伝え、手ごたえを感じさせるために実装しました。<br>
+                　演出時の画面の演出にはShaderGraphを使いました。敵撃破、ウェーブクリア、ステエージクリアで少し変化するようにしました。</li>
               <li>プレイヤーは移動モードと射撃モードの2つを使い分ける必要があり、ゲームにメリハリが出るようにしました。<br>
                   移動モード中は射撃ができない代わりに自由に動くことができ、回避と位置取りに専念できます。<br>
                   射撃モード中は移動が一切できない代わりに、カメラの方向に銃を向け、レーザーサイトで狙いが付けやすくなります。</li>
               <li>敵には共通で使ういくつかの移動パターンと攻撃パターンを与え、各敵のコントローラーでそれぞれ組み合わせて呼び出すようにしました。<br>
                   実装の簡単さと敵の差別化を両立させるためにこの方針にしました。</li>
-              <li>敵を倒した時のスロー演出や、キャラクターがエリア端に着いたときの境界線にShaderGraphを使用しました。<br>
-                　画像を用意せずとも簡単な表現が可能ということで今回使用しました。</li>
             </ul>
           </p>
           <div class="work-link">
